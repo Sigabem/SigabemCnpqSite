@@ -32,15 +32,57 @@
     text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
+/*
+ * ========================================
+ * 2. LOGO DINÂMICA COM PULSO
+ * ========================================
+ */
 
-
-
-.list-unstyled li i {
-    position: relative;
-    top: -7px; /* Valor típico para compensar o line-height do texto */
-    /* Você pode tentar -2px ou -4px. */
+#solution {
+    margin: 15rem 0 15rem 0;
 }
 
+@keyframes bright-pulse-white {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9)); 
+    }
+    50% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)); 
+    }
+}
+
+@keyframes bright-pulse-green {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px rgba(1, 192, 151, 0.9)); 
+    }
+    50% {
+        filter: drop-shadow(0 0 5px rgba(1, 192, 151, 0.4)); 
+    }
+}
+
+.logo-dynamic-bright {
+    content: url('../images/logos/sigabem-light-mode-without-text.png');
+    will-change: filter;
+    animation-name: bright-pulse-green;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite; 
+}
+
+[data-bs-theme="dark"] .logo-dynamic-bright {
+    content: url('../images/logos/sigabem-dark-mode-without-text.png');
+    will-change: filter;
+    animation-name: bright-pulse-white; 
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite; 
+}
+
+/*
+ * ========================================
+ * 3. FLUXOGRAMA DINÂMICO (LIGHT E DARK MODE)
+ * ========================================
+ */
 .fluxograma-dynamic {
     content: url('../images/about/fluxograma-light-mode.png');
 }
@@ -48,4 +90,16 @@
 /* 2. ESTILO DARK MODE */
 [data-bs-theme="dark"] .fluxograma-dynamic {
     content: url('../images/about/fluxograma-dark-mode.png');
+}
+
+
+
+
+
+
+
+.list-unstyled li i {
+    position: relative;
+    top: -7px; /* Valor típico para compensar o line-height do texto */
+    /* Você pode tentar -2px ou -4px. */
 }

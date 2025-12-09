@@ -12,7 +12,7 @@
 
     --white: #ffffff;
     --lightgreen: #e5fff8;
-    --mint: #01c097;
+    --mint: rgb(1, 192, 151);
     --darkgreen: #3c7f72;
     --darkestgreen: #295f54;
     --black: #0d0607;
@@ -108,7 +108,6 @@ b,
     content: url('../images/logos/sigabem-light-mode-without-text.png');
 }
 
-/* 2. ESTILO DARK MODE */
 [data-bs-theme="dark"] .logo-dynamic {
     content: url('../images/logos/sigabem-dark-mode-without-text.png');
 }
