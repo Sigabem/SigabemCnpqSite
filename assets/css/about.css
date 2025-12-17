@@ -93,7 +93,7 @@
 }
 
 #fluxograma-servidor{
-    margin: 5rem 0 15rem 0;
+    margin: 5rem 0 5rem 0;
 }
 
 /*
@@ -129,12 +129,12 @@
 
 .btn-carousel-side i {
     /* Use um cinza escuro que seja legível em fundos claros e escuros */
-    color: #333333; 
+    color: var(--bs-body-color)
 }
 
 /* Garanta que o hover não mude para branco se o Bootstrap tentar */
 .btn-carousel-side:hover i {
-    color: #111111;
+    color: var(--mint);
 }
 
 .list-unstyled li i {

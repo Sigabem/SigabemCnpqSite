@@ -127,6 +127,10 @@
     color: var(--white);
 }
 
+#cards-container {
+    padding-bottom: 15rem;
+}
+
 /*
  * ========================================
  * 4. ARTIGOS
